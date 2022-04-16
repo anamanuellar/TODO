@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Nanum+Gothic&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+}
+
+html {
+    background-image : url(img/notepad5.jpg);
+    background-repeat: no-repeat;
+    background-size  : cover;
+    font-size        : 100%;
+}
+
+body {
+    font: bold 2rem 'Open Sans', sans-serif;
+
+}
+
+.todo__title {
+    box-sizing     : content-box;
+    width          : fit-content;
+    border-bottom  : solid 1px;
+    justify-content: center;
+    align-items    : center;
+    position       : relative;
+    margin-left    : 33%;
+    margin-top     : 16%;
+    font-family    : 'Cookie', cursive;
+    font-size      : 5rem;
+
+}
+
+#title {
+    position   : fixed !important;
+    top        : 0;
+    margin-top : 1rem;
+    margin-left: 35rem;
+    padding    : 1px;
+}
+
+
+
+.todo__list {
+    display        : flex;
+    box-sizing     : content-box;
+    width          : 50%;
+    height         : auto;
+    flex-direction : column;
+    flex-wrap      : wrap;
+    gap            : 10px;
+    align-content  : space-around;
+    justify-content: center;
+    position       : fixed !important;
+    margin-left    : 23%;
+    margin-top     : 15%;
+    font-size      : 12px;
+    padding        : 10px;
+}
+
+.todo__item {
+    display        : flex;
+    width          : 50%;
+    height         : 20px;
+    justify-content: center;
+    align-items    : center;
+    padding        : 5px;
+    box-shadow     : 0 0 8px -1px rgb(22, 73, 80);
+    border-radius  : 10px;
+    text-transform : normal;
+}
+
+.todo__item>div {
+    width  : 80%;
+    padding: 10px;
+}
+
+.todo__item:hover {
+    cursor    : pointer;
+    transition: all .5s ease;
+
+}
+
+.todo__item>input[type='text'] {
+    border: none;
+    width : 80%;
+
+}
+
+.todo__item>input[type='button'] {
+    background-image : url(img/trash.png);
+    width            : 25px;
+    height           : 20px;
+    background-size  : 20px;
+    background-repeat: no-repeat;
+    border           : none;
+    font             : inherit;
+}
+
+.todo__item>input[type='checkbox'] {
+    width : 15px;
+    height: 20px;
+}
+
+
+.todo__item>input[type='checkbox']:checked+div {
+    text-decoration: line-through;
+
+}
+
+.todo__new-item {
+    display        : flex;
+    width          : 48%;
+    height         : 5%;
+    justify-content: space-evenly;
+    font-size      : 14px;
+    position       : fixed !important;
+    margin-left    : 24%;
+    margin-top     : 12%;
+    box-shadow     : 0 0 8px -1px rgb(190, 57, 4);
+    border-radius  : 10px;
+
+}
+
+.todo__new-item>input {
+    border : none;
+    width  : 80%;
+    outline: none;
+    font   : inherit;
+}
+
+.todo__new-item>input::placeholder {
+    font-style : italic;
+    font-weight: normal;
+}
